@@ -13,5 +13,9 @@ public struct PokemonTypeSet: Hashable, Sendable {
         self.storage = Set(types)
     }
     
+    public func allCases() -> some Collection<PokemonType> & Sendable {
+        PokemonType.allCases.filter(storage.contains)
+    }
+    
     public static let latest: Self = .init(PokemonType.allCases)
 }
