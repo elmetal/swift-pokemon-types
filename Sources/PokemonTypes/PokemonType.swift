@@ -6,7 +6,7 @@
 //
 //
 
-public enum PokemonType: Equatable {
+public enum PokemonType: Equatable, CaseIterable, Sendable {
     case normal
     case fighting
     case flying
